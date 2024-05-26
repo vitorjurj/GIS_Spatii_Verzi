@@ -1,4 +1,4 @@
--- create extension postgis
+--create extension postgis
 
 create table oras(
 	fid serial primary key not null,
@@ -16,6 +16,7 @@ create table zona_verde(
 
 create table tip_zona_verde(
 	fid serial primary key not null,
+	geom geometry('Polygon', 4326),
 	tip varchar(255) not null,
 	name varchar(255),
 	area int,
